@@ -16,7 +16,7 @@ class Album < ActiveRecord::Base
 
   validates :artist_id, :title, :genre, :year_released, presence: true
 
-  has_many :songs, class_name "Song", foreign_key: :album_id, primary_key: :id
+  has_many :songs, class_name: "Song", foreign_key: :album_id, primary_key: :id
   belongs_to :artist, class_name: "Artist", foreign_key: :artist_id, primary_key: :id
 
 end
