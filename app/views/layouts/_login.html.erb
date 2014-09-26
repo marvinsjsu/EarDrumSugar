@@ -1,0 +1,20 @@
+<% unless signed_in? %>
+  <% unless request.original_url.split("/").include?("session")%>
+    <li><a class="btn btn-link btn-md" data-toggle="modal" data-target="#myLogin">Login</a></li>
+  <% end %>
+  <% unless request.original_url.split("/").include?("users")%>
+    <li><a class="btn btn-link btn-md" href="<%= new_user_url %>">Create an Account</a></li>
+  <% end %>
+<% else %>
+  <% @user = current_user %>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi, <%= @user.username %> <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+      <li><%= link_to "my profile", user_url(@user) %></li>
+      <li class="divider"></li>
+      <li><%= link_to "sign out", session_url, :method => :delete %>
+      </li>
+    </ul>
+  </li>
+<% end %>
+

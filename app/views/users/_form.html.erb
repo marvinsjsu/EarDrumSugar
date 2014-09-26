@@ -1,0 +1,27 @@
+<div id="users-new" class="row">
+  <div class="col-xs-4 col-xs-offset-4 register">
+    <%= render partial: "layouts/errors" %>
+
+    <form class="form-horizontal" action="<%= users_url %>" method="post">
+      <input name="_method" type="hidden" value="POST">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      <fieldset>
+        <div class="form-group">
+          <input class="form-control input-lg" type="text" id="user_username" name="user[username]" placeholder="email/username">
+        </div>
+
+        <div class="form-group">
+          <input class="form-control input-lg" type="password" id="user_password" name="user[password]" placeholder="password">
+        </div>
+
+        <div class="form-group">
+          <div class="col-lg-4">
+            <input class="btn btn-primary" type="submit" value="Create Account">
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+  </div>
+<div>
+

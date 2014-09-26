@@ -1,0 +1,28 @@
+<div id="session-new" class="row">
+  <div class="col-xs-8 col-xs-offset-2 login affix">
+    <%= render partial: "layouts/session_errors" %>
+
+    <form class="form-horizontal" action="<%= session_url %>" method="post">
+      <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>">
+      <fieldset>
+        <div class="form-group">
+          <input class="form-control input-lg" type="text" id="user_username" name="user[username]" placeholder="email/username">
+        </div>
+
+        <div class="form-group">
+          <input class="form-control input-lg" type="password" id="user_password" name="user[password]" placeholder="password">
+        </div>
+
+        <div class="form-group">
+          <div class="col-lg-2">
+            <input class="btn btn-primary" type="submit" value="Log in">
+          </div>
+          <div class="col-lg-2">
+            <input class="btn btn-primary" type="reset" value="Reset">
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+  <br/>
+</div>

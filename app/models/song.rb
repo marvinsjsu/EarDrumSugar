@@ -17,4 +17,6 @@ class Song < ActiveRecord::Base
 
   belongs_to :album, class_name: "Album", foreign_key: :album_id, primary_key: :id
   belongs_to :artist, class_name: "Artist", foreign_key: :artist_id, primary_key: :id
+
+  mount_uploader :music, MusicUploader
 end

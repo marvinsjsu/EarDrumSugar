@@ -17,6 +17,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'rails_12factor'
 gem 'pg'
+gem 'carrierwave'
 group :doc do
   gem 'sdoc', require: false
 end

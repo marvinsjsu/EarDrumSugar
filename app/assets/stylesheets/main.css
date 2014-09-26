@@ -1,0 +1,68 @@
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.righty {
+  text-align: right;
+}
+
+
+.footer-logo {
+  width: 25%;
+}
+
+.logo, .cursive{
+  font-family: 'Courgette', cursive;
+  font-size: 1.5em;
+}
+
+.cursive-small {
+  font-family: 'Courgette', cursive;
+  font-size: 1em;
+}
+
+.main-content {
+  min-height: 500px;
+}
+
+h1.main-splash {
+  font-size: 1.5em;
+  padding: 1em;
+}
+
+.container-fluid div{
+  border: 0;
+  opacity: 0.99;
+  filter: alpha(opacity=99); /* For IE8 and earlier */
+  z-index: 1001;
+}
+
+.non-opaque {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+img.album-aw {
+  opacity: 1;
+  filter: alpha(opacity=100); /* For
+}
+
+.navbar {
+  border: 0;
+  opacity: 0.97;
+  filter: alpha(opacity=97); /* For IE8 and earlier */
+  z-index: 1000;
+}
+
+body {
+  background: url('/assets/eardrum13.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.login, .register {
+  position: relative;
+}
